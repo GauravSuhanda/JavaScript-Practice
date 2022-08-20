@@ -5,36 +5,42 @@ import './style.css';
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
-// Callback function
+// First Class Function
 
-/* 
-we are making a shopping application
-  Create Order
-  Payment
-  Order Summary
-  Update Wallet
+/**
+ * In case of Hoisting, fn <statement> is execute and <expression> is not.
+ * Until the code is on (var b). It won't execute...
+ */
 
-The two problems that we  faced in callbacks are:-
-1) Callback Hell: Asynchronous operations in JavaScript can be achieved through callbacks. Whenever there are multiple dependent Asynchronous operations it will result in a lot of nested callbacks. This will cause a 'pyramid of doom' like structure.
-2) Inversion of control: When we give the control of callbacks being called to some other API, this may create a lot of issues. That API may be buggy, written by interns, may not call our callback and create order as in the above example, may call the payment callback twice etc.
+// Function Statement || Function Declearation
+function a() {
+  console.log('This is what function statements are...');
+}
 
-*/
-// const cart = ['shoes', 'pants', 'shirts'];
-/* 
+// Function Expression
+var b = function () {
+  // var b = function xyz() {  <--: This is Name function expression
+  console.log('This is what function expression are...');
+};
 
-api.createOrder(cart, function () {
-  api.proceedToPayment(function () {
-    api.showOrderSummary(function () {
-      api.updateWallet();
-    });
-  });
-});
+// Anonymous Function
+// Function with no name; AF are used as values
+// You can use AF in <expressions> but not in statements
+// Syntax: function() {}
 
-*/
-// Unmaintainable & Not soo good structure
-// Also called Pyramid of Doom
+// Difference between Parameters & Arguments
+var c = function (parameter1, parameter2) {
+  // var b = function xyz() {  <--: This is Name function expression
+  console.log('This is what function expression are...');
+};
+c(argument);
 
-// --------------------------------------------- //
-
-// Inversion of Control
-// Lose the control when you do callback
+// First Class function
+// functions are treated as values. So we can pass functions in arguments
+function d() {
+  console.log('Something somthing...');
+}
+var e = function () {
+  console.log('Something 2..');
+};
+e(d);
