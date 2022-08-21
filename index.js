@@ -5,42 +5,27 @@ import './style.css';
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
-// First Class Function
-
+// Function Currying using bind method & Closures method
 /**
- * In case of Hoisting, fn <statement> is execute and <expression> is not.
- * Until the code is on (var b). It won't execute...
+ * Transformation of the function of multiple arguments into several
+ * functions of a single argument in sequence
  */
-
-// Function Statement || Function Declearation
-function a() {
-  console.log('This is what function statements are...');
-}
-
-// Function Expression
-var b = function () {
-  // var b = function xyz() {  <--: This is Name function expression
-  console.log('This is what function expression are...');
+let multiply = function (x, y) {
+  console.log('Fuction Currying + Bind:', x * y);
 };
 
-// Anonymous Function
-// Function with no name; AF are used as values
-// You can use AF in <expressions> but not in statements
-// Syntax: function() {}
+let multiplyByTwo = multiply.bind(this, 2); // we set x = 2 and also y = something
+multiplyByTwo(5);
 
-// Difference between Parameters & Arguments
-var c = function (parameter1, parameter2) {
-  // var b = function xyz() {  <--: This is Name function expression
-  console.log('This is what function expression are...');
-};
-c(argument);
+let multiplyByThree = multiply.bind(this, 3);
+multiplyByThree(5);
 
-// First Class function
-// functions are treated as values. So we can pass functions in arguments
-function d() {
-  console.log('Something somthing...');
-}
-var e = function () {
-  console.log('Something 2..');
+let multiplyWithClosure = function (x) {
+  return function (y) {
+    console.log('Fuction Currying + Closures:', x * y);
+  };
 };
-e(d);
+let multiplyByTwoWithClosures = multiplyWithClosure(2);
+multiplyByTwoWithClosures(5);
+let multiplyByThreeWithClosure = multiplyWithClosure(3);
+multiplyByThreeWithClosure(5);
