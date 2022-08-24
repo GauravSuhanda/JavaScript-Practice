@@ -3,50 +3,24 @@ import './style.css';
 
 // Write Javascript code!
 const appDiv = document.getElementById('app');
-appDiv.innerHTML = `
+appDiv.innerHTML = `<h1>JS Started</h1>`;
 
-  <style>
-  div {
-    min-width: 100px;
-    min-height: 100px;
-    padding: 30px;
-    border: 1px solid black;
-  }
-  </style>
-</head>
-<body>
+/**
+ * JavaScript synchronous single threaded language
+ * and everything is present in the call stack.
+ * Step 1: Global execution context is created (GEC)
+ */
 
-  <div id="grandparent">
-    <div id="parent">
-      <div id="child"></div>
-    </div>
-  </div>
-</body>
-`;
+function a() {
+  // ← First this will come in call stack a()
+  console.log('a');
+}
+a();
+console.log('end');
 
-document.querySelector('#grandparent').addEventListener(
-  'click',
-  (e) => {
-    console.log('Grandparent Clicked!');
-    //e.stopPropagation();
-  },
-  // true : Event Capturing
-  // false : Event Bubbling
-  true
-);
-
-document.querySelector('#parent').addEventListener(
-  'click',
-  (e) => {
-    console.log('Parent Clicked!');
-  },
-  true
-);
-
-document.querySelector('#child').addEventListener(
-  'click',
-  (e) => {
-    console.log('Child Clicked!');
-  },
-  true
-);
+/**
+ * Call Stack
+ *
+ * a()
+ * GEC ↑ going upward..
+ */
