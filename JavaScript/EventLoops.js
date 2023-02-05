@@ -24,3 +24,17 @@ console.log('end');
  * a()
  * GEC ↑ going upward..
  */
+
+/**
+ * Event Loop
+ * The job of event loop is to check the
+ * CallBack Queue and put it into Call Stack
+ */
+
+console.log('Start');
+setTimeout(function cb() {
+  console.log('Callback');
+}, 5000);
+console.log('End');
+
+// output: Start End Callback
