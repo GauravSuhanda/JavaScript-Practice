@@ -38,3 +38,16 @@ setTimeout(function cb() {
 console.log('End');
 
 // output: Start End Callback
+
+// Advance Level Event Loop
+
+Promise.resolve(console.log(6)).then(() => console.log(1));
+
+setTimeout(() => console.log(2), 10);
+
+queueMicrotask(() => {
+  console.log(3);
+  queueMicrotask(() => console.log(4));
+});
+
+console.log(5);
