@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/3bc421ba-7484-452d-a501-9d31ff740fe6)
+![image]([https://github.com/user-attachments/assets/3bc421ba-7484-452d-a501-9d31ff740fe6](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/240px-JavaScript-logo.png))
 
 <h1>JavaScript Practice Repo</h1>
 
