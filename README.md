@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/3bc421ba-7484-452d-a501-9d31ff740fe6)
+
 <h1>JavaScript Practice Repo</h1>
 
 Welcome to the **JavaScript Practice** repository! This repo is dedicated to helping developers of all levels improve their JavaScript skills through practical exercises, challenges, and examples.
