@@ -38,3 +38,33 @@ api.createOrder(cart, function () {
 
 // Inversion of Control
 // Lose the control when you do callback
+
+
+// 1️⃣ Synchronous Callback
+function greet(name, callback) {
+  console.log(`Hello, ${name}!`);
+  callback();
+}
+
+function sayGoodBye() {
+  console.log("GoodBye!")
+}
+
+greet("User", sayGoodBye); 
+// Hello User!, GoodBye!
+
+// 2️⃣ Asynchronous Callback
+function asyncOperations(callback) {
+  console.log("Start of operation");
+  setTimeout(function(){
+    callback();
+  },1000)
+  console.log("End of operation");
+}
+
+function callback(){
+  console.log("Callback executed");
+}
+
+asyncOperations(callback);
+//Start of ops end of ops callback executed
