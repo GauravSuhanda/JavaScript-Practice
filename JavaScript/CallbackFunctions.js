@@ -1,11 +1,13 @@
-// Import stylesheets
-import './style.css';
-
-// Write Javascript code!
-const appDiv = document.getElementById('app');
-appDiv.innerHTML = `<h1>JS Starter</h1>`;
-
 // Callback function
+
+/**
+Callback → A function that’s called after the first function has completed its task
+1. Allow you to handle events.
+2. Send Async API calls
+3. Enhance code performance
+4. Preventing call back hell
+5. Inversion of control handling
+ */
 
 /* 
 we are making a shopping application
